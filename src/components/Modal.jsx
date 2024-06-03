@@ -21,7 +21,7 @@ function Modal() {
                 </div>
             </div>
 
-            {/* Botón para abrir el modal */}
+            
             <div className="flex h-screen w-[450px] bg-customSecondaryDark">
                 <div className="flex-grow bg-customSecondaryDark">
                     <button className="m-4 p-2 bg-customgraytwo text-customtextW rounded" onClick={toggleSidebar}>Search for places</button> 
