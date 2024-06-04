@@ -24,6 +24,14 @@ function WeatherCard({ weatherData, toggleModal }) {
     const temperature = currentWeather.main.temp;
     const weatherDescription = currentWeather.weather[0].description;
 
+    // Función para convertir la temperatura de kelvin a Celsius
+    const kelvinToCelsius = (temp) => {
+        return temp - 273.15;
+    };
+
+    // Convertir la temperatura de kelvin a Celsius
+    const temperatureInCelsius = kelvinToCelsius(temperature);
+
     return (
         <div className="absolute top-0 left-0 h-full w-full max-w-[375px] mx-auto bg-[#1E213A] p-6 transition-transform duration-300 ease-in-out transform translate-x-0">
             {/* Search Button */}
@@ -51,7 +59,7 @@ function WeatherCard({ weatherData, toggleModal }) {
 
             <div className="text-center mb-12">
                 <div className="text-[144px] font-light leading-none">
-                    {temperature.toFixed(2)}<span className="text-5xl font-normal text-[#A09FB1] align-top ml-2">°C</span>
+                    {temperatureInCelsius.toFixed(2)}<span className="text-5xl font-normal text-[#A09FB1] align-top ml-2">°C</span>
                 </div>
                 <div className="text-[#A09FB1] text-4xl mt-6">{weatherDescription}</div>
             </div> 
