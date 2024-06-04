@@ -6,7 +6,7 @@ import { WeatherContext } from '../hooks/WeatherContext';
 function Modal() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [location, setLocation] = useState('');
-    const { fetchWeather, weatherData } = useContext(WeatherContext);
+    const { fetchWeather, weatherData } = useContext(WeatherContext); // Importa y usa el contexto
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
@@ -40,4 +40,3 @@ function Modal() {
 }
 
 export default Modal;
-/*Utilizo el fetchWeather de la api para buscar ubicaciones. */
