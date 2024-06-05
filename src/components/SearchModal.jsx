@@ -5,6 +5,10 @@ function SearchModal({ isModalOpen, toggleModal, location, setLocation, handleSe
         handleSearch();
     };
 
+    const handleLocationButtonClick = (city) => {
+        handleQuickSearch(city);
+    };
+
     const handleLocationInputChange = (e) => {
         setLocation(e.target.value);
     };
@@ -31,9 +35,9 @@ function SearchModal({ isModalOpen, toggleModal, location, setLocation, handleSe
                 </div>
 
                 <div className="space-y-4">
-                    <button onClick={() => handleQuickSearch('london')} className="w-full py-4 px-6 bg-[#2D3748] hover:bg-gray-700 rounded-md text-left text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">London</button>
-                    <button onClick={() => handleQuickSearch('barcelona')} className="w-full py-4 px-6 bg-[#2D3748] hover:bg-gray-700 rounded-md text-left text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Barcelona</button>
-                    <button onClick={() => handleQuickSearch('long beach')} className="w-full py-4 px-6 bg-[#2D3748] hover:bg-gray-700 rounded-md text-left text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Long Beach</button>
+                    <button onClick={() => handleLocationButtonClick('london')} className="w-full py-4 px-6 bg-[#2D3748] hover:bg-gray-700 rounded-md text-left text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">London</button>
+                    <button onClick={() => handleLocationButtonClick('barcelona')} className="w-full py-4 px-6 bg-[#2D3748] hover:bg-gray-700 rounded-md text-left text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Barcelona</button>
+                    <button onClick={() => handleLocationButtonClick('long beach')} className="w-full py-4 px-6 bg-[#2D3748] hover:bg-gray-700 rounded-md text-left text-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Long Beach</button>
                 </div>
             </div>
         </div>
