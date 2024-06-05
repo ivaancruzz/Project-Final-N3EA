@@ -7,7 +7,7 @@ import { TemperaturTime } from "./TemperaturTime"
 export const Time = () => {
     return (
         <>
-         <div style={{ width: "84%" ,padding: "3rem", justifyContent: "space-around", gap: "6rem" }} className=" md:w-3/4 flex flex-col h-screen ">
+          <div className="w-full md:w-3/4 flex flex-col h-screen p-6 md:p-12 justify-around gap-6">
             <WeeklyTime/>
             <TemperaturTime/>
          </div>

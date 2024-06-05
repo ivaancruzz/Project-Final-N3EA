@@ -14,6 +14,9 @@ export default {
         customtextW:'rgba(231, 231, 235, 1)',
         customYell:'rgba(255, 236, 101, 1)'
       },
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+      },
     },
   },
   plugins: [],
